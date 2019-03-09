@@ -1,0 +1,106 @@
+% THIS IS GDANSK UNIVERSITY OF TECHNLOGOGY (PG) PRESENTATION TEMPLATE
+% Creator: Jan Cychnerski <jan.cychnerski@eti.pg.edu.pl>
+% Copyleft 2019
+
+
+% PG THEME OPTIONS
+
+\usetheme{Boadilla}
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+
+% colors
+
+\definecolor{PGBlue}{RGB}{0,56,101}
+\definecolor{PGRed}{RGB}{193,10,39}
+\definecolor{PGSilver}{RGB}{200,200,200}
+\definecolor{PGBlack}{RGB}{0,0,0}
+
+% PGBlue
+\setbeamercolor{frametitle}{fg=PGBlue}
+\setbeamercolor{normal text}{fg=PGBlue}
+\setbeamercolor{structure}{fg=PGBlue}
+\setbeamercolor{item}{fg=PGBlue}
+
+% PGRed
+\setbeamercolor{alerted text}{fg=PGRed}
+\setbeamercolor{item projected}{fg=PGRed}
+
+% white
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{titlelike}{fg=white}
+\setbeamercolor{subtitle}{fg=white}
+
+% enumerate and itemize styles
+
+\setbeamertemplate{itemize item}{\bfseries\color{PGRed}\raise1pt\hbox{\donotcoloroutermaths$\bullet$}}
+\setbeamertemplate{itemize subitem}{\color{PGRed}\raise0.5pt\hbox{--}}
+\setbeamertemplate{itemize subsubitem}{\color{PGRed}\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\bullet$}}
+
+\setbeamertemplate{enumerate item}{\bfseries\color{PGRed}\insertenumlabel.}
+\setbeamertemplate{enumerate subitem}{\color{PGRed}\insertsubenumlabel.}
+\setbeamertemplate{enumerate subsubitem}{\color{PGRed}\insertsubsubenumlabel.}
+\setbeamertemplate{enumerate mini template}{\insertenumlabel}
+
+
+% disable navigation
+
+\beamertemplatenavigationsymbolsempty
+
+% additional commands
+
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+\graphicspath{{pgbeamer/}}
+
+
+\usepackage{iflang}
+\IfLanguageName{polish}{
+\newcommand{\pglogobig}{pg-logo-big-pl}
+\newcommand{\pglogosmall}{pg-logo-small-pl}
+}{
+\newcommand{\pglogobig}{pg-logo-big-en}
+\newcommand{\pglogosmall}{pg-logo-small-en}
+}
+
+
+% FRAME TITLE LOGO
+\addtobeamertemplate{frametitle}{\vcenteredhbox{\includegraphics[height=8mm]{\pglogosmall}}\bfseries}{}
+
+
+\newcommand{\pgtitleframe}{{
+% PG TITLE PAGE
+
+\setbeamercolor{background canvas}{bg=PGBlue}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor*{date}{fg=white}
+\setbeamercolor*{author}{fg=white}
+
+\setbeamertemplate{footline}{}
+
+\begin{frame}[noframenumbering]
+\centering
+\vspace{1cm}
+\includegraphics[height=3cm]{\pglogobig}
+\vspace{5mm}
+\maketitle
+\end{frame}
+}}
+
+\newcommand{\pglastframe}{{
+% PG LAST PAGE
+
+\setbeamercolor{background canvas}{bg=PGBlue}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor*{date}{fg=white}
+\setbeamercolor*{author}{fg=white}
+
+\setbeamertemplate{footline}{}
+
+\begin{frame}[noframenumbering]
+\centering
+\vspace{1cm}
+\includegraphics[height=5cm]{\pglogobig}
+\end{frame}
+}}
